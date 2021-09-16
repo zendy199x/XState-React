@@ -1,0 +1,1 @@
+export const STATS_API = `https://coronavirus-19-api.herokuapp.com/countries`
