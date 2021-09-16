@@ -1,5 +1,7 @@
 import { useMachine } from "@xstate/react";
+import Link from "next/link";
 import React from "react";
+import { Button } from "react-bootstrap";
 import CountrySearch from "../components/CountrySearch";
 import CountrySelector from "../components/CountrySelector";
 import Stat from "../components/Stat";
@@ -10,7 +12,10 @@ const App = () => {
 
   return (
     <>
-      <div>CoronaVirus Information</div>
+      <Link href="/toggle" passHref>
+        <Button variant="primary">Toggle Example</Button>
+      </Link>
+      <h1>CoronaVirus Information</h1>
       {current.matches("fetchStats") && <div>Loading Stats…</div>}
       {current.matches("error") && <div>Error fetching stats…</div>}
       {current.matches("ready") && (
