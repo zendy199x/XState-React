@@ -15,7 +15,7 @@ const App = () => {
       <Link href="/toggle" passHref>
         <Button variant="primary">Toggle Example</Button>
       </Link>
-      <h1>CoronaVirus Information</h1>
+      <h1>Covid-19 Information</h1>
       {current.matches("fetchStats") && <div>Loading Stats…</div>}
       {current.matches("error") && <div>Error fetching stats…</div>}
       {current.matches("ready") && (
